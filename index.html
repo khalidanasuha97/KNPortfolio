@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Khalida Nasuha | Portfolio</title>
+<meta content="Khalida Nasuha portfolio website" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800;900&amp;family=Allura&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<style>
+/* =====================================================
+   Soft Matcha Strawberry Editorial Layout
+===================================================== */
+
+:root {
+  --matcha-50: #f7fbf2;
+  --matcha-100: #edf4e6;
+  --matcha-200: #dfead4;
+  --matcha-300: #c8d8ba;
+  --matcha-500: #819673;
+  --matcha-700: #536848;
+  --pink-50: #fff6f8;
+  --pink-100: #fcecef;
+  --pink-200: #f6d7dd;
+  --pink-300: #edb8c4;
+  --pink-500: #c98494;
+  --cream: #fffaf6;
+  --paper: #fffdfb;
+  --ink: #2b2522;
+  --muted: #706865;
+  --line: rgba(43, 37, 34, 0.10);
+  --shadow: 0 24px 70px rgba(54, 46, 43, 0.08);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header,
+.footer,
+.hero-grid,
+.hero-marquee,
+.about-section,
+.work-section,
+.skills-section,
+.contact-section {
+  width: min(1180px, calc(100% - 28px));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 14px;
+  z-index: 50;
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 22px;
+  padding: 12px 14px 12px 20px;
+  border: 1px solid rgba(83,104,72,.13);
+  background: rgba(255,253,251,.82);
+  backdrop-filter: blur(14px);
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(54,46,43,0.05);
+}
+
+.brand {
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  color: var(--matcha-700);
+}
+.brand span { color: var(--pink-500); }
+
+.desktop-nav {
+  justify-self: center;
+  display: flex;
+  gap: 26px;
+}
+.desktop-nav a {
+  color: var(--muted);
+  font-weight: 800;
+  font-size: .9rem;
+}
+.desktop-nav a:hover { color: var(--matcha-700); }
+
+.nav-cta {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--matcha-700);
+  color: white;
+  font-weight: 900;
+  font-size: .9rem;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--matcha-700);
+}
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 5px auto;
+  background: white;
+  border-radius: 999px;
+}
+
+.mobile-nav {
+  display: none;
+  width: min(1180px, calc(100% - 28px));
+  margin: 8px auto 0;
+  padding: 12px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+.mobile-nav a {
+  display: block;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--matcha-700);
+  font-weight: 800;
+}
+.mobile-nav a:last-child { border-bottom: 0; }
+.mobile-nav.is-open { display: block; }
+
+/* Hero */
+.hero-section {
+  position: relative;
+  margin-top: -72px;
+  padding: 142px 0 42px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(246,215,221,.95), transparent 21%),
+    radial-gradient(circle at 85% 12%, rgba(200,216,186,.82), transparent 24%),
+    linear-gradient(135deg, var(--matcha-100) 0%, var(--pink-100) 100%);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .45;
+  background-image:
+    linear-gradient(rgba(83,104,72,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(83,104,72,.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(340px, .84fr);
+  gap: 52px;
+  align-items: center;
+  min-height: 640px;
+}
+
+.tiny-label {
+  margin: 0 0 14px;
+  color: var(--pink-500);
+  font-size: .82rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-size: clamp(6rem, 14vw, 12.5rem);
+  line-height: .72;
+  color: var(--matcha-700);
+  letter-spacing: 0;
+}
+
+.hero-copy h1 span {
+  display: block;
+  color: var(--pink-500);
+  transform: translateX(28px);
+}
+
+.hero-subtitle {
+  max-width: 650px;
+  margin: 34px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.06rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.btn.primary {
+  background: var(--matcha-700);
+  color: white;
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,.72);
+  color: var(--matcha-700);
+  border: 1px solid rgba(83,104,72,.16);
+}
+
+/* Photo */
+.hero-photo-card {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+}
+
+.photo-wrap {
+  position: relative;
+  z-index: 3;
+  width: min(380px, 90%);
+  padding: 16px;
+  border-radius: 48px;
+  background: rgba(255,253,251,.58);
+  border: 1px solid rgba(83,104,72,.12);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  transform: rotate(2deg);
+}
+
+.photo-placeholder {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 36px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(255,255,255,.86) 0 16%, transparent 17%),
+    linear-gradient(145deg, #f5d6dd, #e2d9c6);
+  color: rgba(43,37,34,.45);
+  font-weight: 900;
+}
+
+.photo-decoration {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.photo-decoration.one {
+  width: 280px;
+  height: 280px;
+  top: 20px;
+  right: 22px;
+  background: rgba(237,184,196,.56);
+}
+
+.photo-decoration.two {
+  width: 320px;
+  height: 320px;
+  bottom: 10px;
+  left: 0;
+  background: rgba(200,216,186,.72);
+}
+
+.name-sticker {
+  position: absolute;
+  z-index: 4;
+  left: 8px;
+  bottom: 50px;
+  max-width: 260px;
+  padding: 16px 18px;
+  border-radius: 22px;
+  background: rgba(255,253,251,.88);
+  border: 1px solid rgba(43,37,34,.08);
+  box-shadow: 0 18px 46px rgba(54,46,43,.10);
+  transform: rotate(-4deg);
+}
+.name-sticker strong {
+  display: block;
+  font-family: "DM Serif Display", serif;
+  color: var(--matcha-700);
+  font-size: 1.32rem;
+}
+.name-sticker span {
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 800;
+}
+
+/* Marquee */
+.hero-marquee {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 4px 0 20px;
+}
+.hero-marquee span {
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(83,104,72,.10);
+  color: var(--matcha-700);
+  font-weight: 900;
+  font-size: .86rem;
+}
+
+/* About */
+.about-section {
+  display: grid;
+  grid-template-columns: 84px 1fr .82fr;
+  gap: 28px;
+  align-items: start;
+  padding: 92px 0;
+}
+
+.section-number {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pink-200);
+  color: var(--matcha-700);
+  font-weight: 900;
+}
+
+.about-main h2,
+.section-head h2,
+.skills-intro h2,
+.contact-section h2 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  color: var(--matcha-700);
+  letter-spacing: -.04em;
+  line-height: .95;
+  font-size: clamp(2.6rem, 6vw, 5.3rem);
+}
+
+.about-main p:not(.tiny-label) {
+  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.04rem;
+}
+
+.stats-card {
+  display: grid;
+  gap: 12px;
+}
+.stats-card div {
+  padding: 20px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(255,255,255,.76), rgba(252,236,239,.66));
+  border: 1px solid rgba(43,37,34,.07);
+}
+.stats-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--pink-500);
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: -.07em;
+}
+.stats-card span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+/* Work */
+.work-section {
+  padding: 88px 0;
+  border-radius: 48px;
+  background: linear-gradient(180deg, var(--paper), var(--matcha-50));
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 26px;
+  margin-bottom: 32px;
+}
+.section-head p:last-child {
+  max-width: 360px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.featured-work {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 22px;
+}
+
+.feature-card {
+  display: grid;
+  overflow: hidden;
+  border-radius: 34px;
+  border: 1px solid rgba(43,37,34,.08);
+  background: white;
+  box-shadow: 0 18px 46px rgba(54,46,43,.06);
+}
+.feature-card.large {
+  grid-row: span 2;
+}
+.feature-card:not(.large) {
+  grid-template-columns: .9fr 1fr;
+}
+
+.project-preview {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--cream);
+}
+.project-preview.small {
+  min-height: 250px;
+}
+
+.browser-bar {
+  position: relative;
+  z-index: 2;
+  height: 30px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.9);
+}
+.browser-bar span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: #d8c7ca;
+}
+
+.scroll-page {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 760px;
+  transition: transform 1.15s cubic-bezier(.2,.8,.2,1);
+}
+.feature-card:hover .scroll-page {
+  transform: translateY(calc(-100% + 420px));
+}
+.project-preview.small .scroll-page {
+  height: 570px;
+}
+.feature-card:hover .project-preview.small .scroll-page {
+  transform: translateY(calc(-100% + 250px));
+}
+
+.page-hero {
+  height: 220px;
+}
+.fashion-page .page-hero {
+  background: linear-gradient(135deg, var(--matcha-300), var(--pink-200));
+}
+.wellness-page .page-hero {
+  background: linear-gradient(135deg, var(--matcha-200), var(--pink-100));
+}
+.brand-page .page-hero {
+  background: linear-gradient(135deg, var(--pink-200), var(--matcha-200));
+}
+
+.page-grid,
+.page-stats {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+.page-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.page-grid.three,
+.page-stats {
+  grid-template-columns: repeat(3, 1fr);
+}
+.page-grid i,
+.page-stats i,
+.page-banner,
+.page-footer {
+  display: block;
+  border-radius: 16px;
+  background: #f3ebe7;
+}
+.page-grid i {
+  min-height: 92px;
+}
+.page-grid.alt i {
+  background: #f6dfe4;
+}
+.page-stats i {
+  min-height: 80px;
+  background: #e1ead7;
+}
+.page-banner {
+  height: 120px;
+  margin: 0 18px 18px;
+  background: #f7eef1;
+}
+.page-footer {
+  height: 160px;
+  margin: 0 18px 18px;
+  background: var(--matcha-500);
+}
+
+.project-copy {
+  padding: 24px;
+}
+.project-copy span {
+  color: var(--pink-500);
+  font-weight: 900;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.project-copy h3 {
+  margin: 12px 0 10px;
+  color: var(--matcha-700);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.project-copy p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+.project-copy a {
+  color: var(--pink-500);
+  font-weight: 900;
+}
+
+/* Work strip */
+.work-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+.work-strip div {
+  min-height: 110px;
+  display: grid;
+  place-items: end start;
+  padding: 16px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--pink-100), var(--matcha-100));
+  color: var(--matcha-700);
+  font-weight: 900;
+  border: 1px solid rgba(43,37,34,.06);
+}
+
+/* Skills */
+.skills-section {
+  display: grid;
+  grid-template-columns: 84px .9fr 1.1fr;
+  gap: 28px;
+  padding: 92px 0;
+}
+
+.skill-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.skill-board div {
+  padding: 22px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.68);
+  border: 1px solid rgba(43,37,34,.07);
+}
+.skill-board h3 {
+  margin: 0 0 8px;
+  color: var(--matcha-700);
+}
+.skill-board p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Contact */
+.contact-section {
+  padding: 72px;
+  margin-bottom: 42px;
+  border-radius: 44px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(246,215,221,.9), transparent 28%),
+    linear-gradient(135deg, var(--matcha-100), var(--pink-100));
+}
+.contact-section h2 {
+  max-width: 900px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+.contact-links a {
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.74);
+  border: 1px solid rgba(43,37,34,.07);
+  color: var(--matcha-700);
+  font-weight: 900;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 0 30px;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .desktop-nav,
+  .nav-cta { display: none; }
+  .menu-toggle { display: block; justify-self: end; }
+  .site-header { grid-template-columns: auto 1fr; }
+
+  .hero-grid,
+  .about-section,
+  .skills-section,
+  .featured-work,
+  .feature-card:not(.large) {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    min-height: auto;
+    padding-top: 50px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(5.5rem, 18vw, 9rem);
+  }
+
+  .hero-photo-card {
+    min-height: 480px;
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  .section-head p:last-child {
+    max-width: 100%;
+    margin-top: 14px;
+  }
+
+  .work-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-strip div {
+    min-height: 90px;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header,
+  .footer,
+  .hero-grid,
+  .hero-marquee,
+  .about-section,
+  .work-section,
+  .skills-section,
+  .contact-section {
+    width: min(1180px, calc(100% - 18px));
+  }
+
+  .hero-section {
+    padding-top: 128px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(4.8rem, 24vw, 6.8rem);
+  }
+
+  .hero-copy h1 span {
+    transform: translateX(12px);
+  }
+
+  .hero-photo-card {
+    min-height: 420px;
+  }
+
+  .photo-wrap {
+    width: min(310px, 90%);
+    border-radius: 34px;
+  }
+
+  .photo-placeholder {
+    border-radius: 26px;
+  }
+
+  .name-sticker {
+    left: 0;
+    bottom: 18px;
+  }
+
+  .about-section,
+  .skills-section {
+    padding: 64px 0;
+  }
+
+  .about-main h2,
+  .section-head h2,
+  .skills-intro h2,
+  .contact-section h2 {
+    font-size: clamp(2.5rem, 14vw, 3.8rem);
+  }
+
+  .stats-card strong {
+    font-size: 1.8rem;
+  }
+
+  .featured-work {
+    gap: 16px;
+  }
+
+  .project-preview,
+  .project-preview.small {
+    min-height: 310px;
+  }
+
+  .scroll-page,
+  .project-preview.small .scroll-page {
+    height: 680px;
+    animation: autoPreview 7s ease-in-out infinite alternate;
+  }
+
+  .feature-card:hover .scroll-page,
+  .feature-card:hover .project-preview.small .scroll-page {
+    transform: none;
+  }
+
+  .page-grid,
+  .page-grid.three,
+  .page-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-strip,
+  .skill-board {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 42px 22px;
+  }
+
+  .contact-links {
+    display: grid;
+  }
+
+  .contact-links a {
+    border-radius: 20px;
+    overflow-wrap: anywhere;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@keyframes autoPreview {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-100% + 310px)); }
+}
+
+
+/* More image-heavy selected work */
+
+.gallery-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin: 32px 0 18px;
+}
+
+.gallery-heading h3 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  color: var(--matcha-700);
+  letter-spacing: -.03em;
+  line-height: 1;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+}
+
+.gallery-heading p:last-child {
+  max-width: 420px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.image-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  border-radius: 28px;
+  background: white;
+  border: 1px solid rgba(43,37,34,.08);
+  box-shadow: 0 16px 40px rgba(54,46,43,.06);
+}
+
+.gallery-card.tall {
+  grid-row: span 2;
+}
+
+.gallery-card.wide {
+  grid-column: span 2;
+}
+
+.gallery-visual {
+  position: relative;
+  min-height: 210px;
+  background: linear-gradient(135deg, var(--matcha-100), var(--pink-100));
+}
+
+.gallery-card.tall .gallery-visual {
+  min-height: 400px;
+}
+
+.gallery-card.wide .gallery-visual {
+  min-height: 210px;
+}
+
+.gallery-visual::before,
+.gallery-visual::after {
+  content: "";
+  position: absolute;
+  border-radius: 18px;
+  background: rgba(255,255,255,.84);
+  border: 1px solid rgba(43,37,34,.06);
+}
+
+.gallery-visual::before {
+  width: 70%;
+  height: 58%;
+  left: 18px;
+  top: 18px;
+}
+
+.gallery-visual::after {
+  width: 34%;
+  height: 34%;
+  right: 18px;
+  bottom: 18px;
+  box-shadow: -14px -14px 0 rgba(255,255,255,.34);
+}
+
+.website-shot {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.18), transparent),
+    linear-gradient(135deg, #dfead4, #f8dfe5);
+}
+.website-shot::before {
+  width: 78%;
+  height: 74%;
+}
+.website-shot::after {
+  width: 44%;
+  height: 22%;
+}
+
+.shopee-shot {
+  background: linear-gradient(135deg, #f8dce1, #fff4f6);
+}
+.tiktok-shot {
+  background: linear-gradient(135deg, #dfead4, #f4dce2);
+}
+.campaign-shot {
+  background: linear-gradient(135deg, #f1d6dd, #e7f0db);
+}
+.ai-shot {
+  background: linear-gradient(135deg, #e6efdb, #f6dce2);
+}
+.social-shot {
+  background: linear-gradient(135deg, #fcecef, #edf4e6);
+}
+.email-shot {
+  background: linear-gradient(135deg, #edf4e6, #fff6f8);
+}
+.live-shot {
+  background: linear-gradient(135deg, #f9e2e7, #e5efda);
+}
+
+.social-shot::before,
+.ai-shot::before,
+.email-shot::before,
+.live-shot::before,
+.shopee-shot::before,
+.tiktok-shot::before {
+  width: 78%;
+  height: 18%;
+  top: 16px;
+}
+
+.social-shot::after,
+.ai-shot::after,
+.email-shot::after,
+.live-shot::after,
+.shopee-shot::after,
+.tiktok-shot::after {
+  width: 78%;
+  height: 54%;
+  left: 16px;
+  right: auto;
+  bottom: 16px;
+  box-shadow: none;
+}
+
+.campaign-shot::before {
+  width: 44%;
+  height: 68%;
+}
+
+.campaign-shot::after {
+  width: 44%;
+  height: 68%;
+}
+
+.gallery-copy {
+  padding: 16px 18px 18px;
+}
+
+.gallery-copy span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--pink-500);
+  font-weight: 900;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.gallery-copy h4 {
+  margin: 0;
+  color: var(--matcha-700);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 980px) {
+  .gallery-heading {
+    display: block;
+  }
+
+  .gallery-heading p:last-child {
+    max-width: 100%;
+    margin-top: 14px;
+  }
+
+  .image-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-card.wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 620px) {
+  .image-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card.tall,
+  .gallery-card.wide {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .gallery-card.tall .gallery-visual,
+  .gallery-card.wide .gallery-visual,
+  .gallery-visual {
+    min-height: 220px;
+  }
+}
+
+
+/* Structured More Work Section */
+
+.structured-work-wrap {
+  margin-top: 34px;
+  padding: 26px;
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(247,251,242,.78));
+  border: 1px solid rgba(43,37,34,.06);
+}
+
+.structured-work-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.structured-work-heading h3 {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  color: var(--matcha-700);
+  letter-spacing: -.03em;
+  line-height: 1;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.structured-work-heading p:last-child {
+  max-width: 400px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.structured-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.structured-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid rgba(43,37,34,.07);
+  box-shadow: 0 12px 32px rgba(54,46,43,.05);
+}
+
+.structured-visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--matcha-100), var(--pink-100));
+  border-bottom: 1px solid rgba(43,37,34,.06);
+}
+
+.structured-visual::before,
+.structured-visual::after {
+  content: "";
+  position: absolute;
+  border-radius: 16px;
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(43,37,34,.05);
+}
+
+.structured-visual::before {
+  width: 76%;
+  height: 18%;
+  left: 16px;
+  top: 16px;
+}
+
+.structured-visual::after {
+  width: 76%;
+  height: 52%;
+  left: 16px;
+  bottom: 16px;
+}
+
+.website-structured {
+  background: linear-gradient(135deg, #e3edd8, #f8dfe5);
+}
+.shopee-structured {
+  background: linear-gradient(135deg, #f9e2e7, #fff7f8);
+}
+.tiktok-structured {
+  background: linear-gradient(135deg, #e2edd7, #f6dce2);
+}
+.social-structured {
+  background: linear-gradient(135deg, #fcecef, #edf4e6);
+}
+.campaign-structured {
+  background: linear-gradient(135deg, #f3d9e0, #e7efdb);
+}
+.ai-structured {
+  background: linear-gradient(135deg, #e7efdb, #f9e2e7);
+}
+
+.website-structured::before {
+  width: 82%;
+  height: 68%;
+  top: 16px;
+}
+.website-structured::after {
+  width: 42%;
+  height: 16%;
+  bottom: 16px;
+  left: auto;
+  right: 16px;
+}
+
+.campaign-structured::before,
+.campaign-structured::after {
+  width: 42%;
+  height: 64%;
+  top: 18%;
+}
+.campaign-structured::before {
+  left: 16px;
+}
+.campaign-structured::after {
+  left: auto;
+  right: 16px;
+  bottom: auto;
+}
+
+.structured-copy {
+  padding: 16px 18px 18px;
+}
+
+.structured-copy span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--pink-500);
+  font-weight: 900;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.structured-copy h4 {
+  margin: 0 0 8px;
+  color: var(--matcha-700);
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.structured-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: .92rem;
+}
+
+@media (max-width: 980px) {
+  .structured-work-heading {
+    display: block;
+  }
+
+  .structured-work-heading p:last-child {
+    max-width: 100%;
+    margin-top: 12px;
+  }
+
+  .structured-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .structured-work-wrap {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .structured-work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Hero title font update: Armelie */
+.hero-copy h1 {
+  font-family: "Armelie", "Allura", cursive;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.hero-copy h1 span {
+  font-family: "Armelie", "Allura", cursive;
+}
+
+
+/* Slower website preview hover scroll */
+.scroll-page {
+  transition: transform 3.8s cubic-bezier(.22, .8, .18, 1);
+}
+
+.feature-card:hover .scroll-page {
+  transform: translateY(calc(-100% + 420px));
+}
+
+.feature-card:hover .project-preview.small .scroll-page {
+  transform: translateY(calc(-100% + 250px));
+}
+
+@media (max-width: 620px) {
+  .scroll-page,
+  .project-preview.small .scroll-page {
+    animation-duration: 11s;
+  }
+}
+
+
+/* Hero photo fix: rounded corners + centered image */
+.photo-wrap {
+  border-radius: 42px;
+  overflow: hidden;
+  transform: rotate(0deg);
+}
+
+.photo-placeholder {
+  border-radius: 30px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.photo-wrap img,
+.photo-placeholder img,
+.hero-photo-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 30px;
+}
+
+@media (max-width: 620px) {
+  .photo-wrap {
+    border-radius: 30px;
+  }
+
+  .photo-placeholder,
+  .photo-wrap img,
+  .photo-placeholder img,
+  .hero-photo-card img {
+    border-radius: 22px;
+  }
+}
+
+
+/* Editable photo placeholders */
+.change-photo-label {
+  position: absolute;
+  z-index: 20;
+  left: 14px;
+  top: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 253, 251, 0.86);
+  border: 1px solid rgba(43,37,34,.08);
+  color: var(--matcha-700);
+  font-size: .78rem;
+  font-weight: 900;
+  box-shadow: 0 10px 28px rgba(54,46,43,.08);
+  pointer-events: none;
+}
+
+.structured-visual .change-photo-label {
+  top: 16px;
+}
+
+.change-photo-label.small-label {
+  font-size: .74rem;
+  padding: 7px 10px;
+}
+
+.photo-placeholder {
+  font-size: .95rem;
+}
+
+@media (max-width: 620px) {
+  .change-photo-label {
+    top: 42px;
+    left: 12px;
+  }
+
+  .structured-visual .change-photo-label {
+    top: 14px;
+  }
+}
+
+
+/* Actual <img src=""> placeholders for easy portfolio photo replacement */
+.photo-placeholder,
+.structured-visual,
+.scroll-page {
+  overflow: hidden;
+}
+
+.replaceable-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.photo-placeholder .replaceable-img {
+  border-radius: 30px;
+}
+
+.structured-visual .replaceable-img {
+  border-radius: 0;
+}
+
+.scroll-page .website-preview-img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Hide old pseudo mockup shapes when real img placeholders are used */
+.structured-visual:has(img)::before,
+.structured-visual:has(img)::after {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .photo-placeholder .replaceable-img {
+    border-radius: 22px;
+  }
+}
+
+
+/* =====================================================
+   EASY PHOTO REPLACEMENT
+   Replace images inside /assets folder OR update the <img src="">
+   in index.html.
+===================================================== */
+
+.photo-placeholder,
+.project-preview,
+.structured-visual,
+.scroll-page {
+  overflow: hidden;
+}
+
+.photo-placeholder img,
+.structured-visual img,
+.scroll-page img,
+.replaceable-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.scroll-page img.website-preview-img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.photo-placeholder img {
+  border-radius: 30px;
+}
+
+@media (max-width: 620px) {
+  .photo-placeholder img {
+    border-radius: 22px;
+  }
+}
+
+
+/* =====================================================
+   Updates: move tools out of hero + fix work card text
+===================================================== */
+
+/* Hide old hero marquee if any older HTML copy still has it */
+.hero-section .hero-marquee {
+  display: none;
+}
+
+/* Give hero only text + photo, no third grid item pushing layout */
+.hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+}
+
+/* Tools/apps panel now lives in Skills section */
+.tools-panel {
+  grid-column: 2 / 4;
+  margin-top: 22px;
+  padding: 24px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(255,255,255,.74), rgba(252,236,239,.58));
+  border: 1px solid rgba(43,37,34,.07);
+  box-shadow: 0 14px 36px rgba(54,46,43,.04);
+}
+
+.tools-panel-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 22px;
+  margin-bottom: 18px;
+}
+
+.tools-panel-copy h3 {
+  max-width: 520px;
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  color: var(--matcha-700);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tools-grid span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(83,104,72,.10);
+  color: var(--matcha-700);
+  font-size: .86rem;
+  font-weight: 900;
+}
+
+/* Fix "E-commerce Website" text being cut / too tight */
+.project-copy {
+  min-width: 0;
+}
+
+.project-copy h3 {
+  line-height: 1.14;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* Give the smaller work cards more room for text */
+.feature-card:not(.large) {
+  grid-template-columns: minmax(210px, .82fr) minmax(260px, 1.18fr);
+}
+
+.feature-card:not(.large) .project-copy {
+  padding: 22px;
+}
+
+.feature-card:not(.large) .project-copy h3 {
+  font-size: clamp(1.25rem, 2.1vw, 1.65rem);
+}
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-panel {
+    grid-column: 1;
+  }
+
+  .tools-panel-copy {
+    display: block;
+  }
+
+  .tools-panel-copy h3 {
+    margin-top: 10px;
+  }
+
+  .feature-card:not(.large) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .tools-panel {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .tools-grid span {
+    min-height: 38px;
+    font-size: .8rem;
+  }
+
+  .project-copy h3 {
+    line-height: 1.18;
+  }
+}
+
+</style>
+</link></head>
+<body>
+<header class="site-header">
+<a class="brand" href="#top">kn<span>.</span></a>
+<nav class="desktop-nav">
+<a href="#about">About</a>
+<a href="#work">Work</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="nav-cta" href="#contact">Let’s connect</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle" type="button">
+<span></span><span></span>
+</button>
+</header>
+<nav class="mobile-nav">
+<a href="#about">About</a>
+<a href="#work">Work</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+<main id="top">
+<!-- HERO -->
+<section class="hero-section">
+<div class="hero-grid">
+<div class="hero-copy">
+<p class="tiny-label">Portfolio 2026</p>
+<h1>
+            khalida’s
+            <span>portfolio</span>
+</h1>
+<p class="hero-subtitle">
+            E-commerce &amp; Social Media Specialist creating content-led growth through marketplaces,
+            campaigns, websites, email marketing and AI creative production.
+          </p>
+<div class="hero-actions">
+<a class="btn primary" href="#work">View selected work</a>
+<a class="btn secondary" href="mailto:khalidanasuha@gmail.com">Email me</a>
+</div>
+</div>
+<div class="hero-photo-card">
+<div class="photo-decoration one"></div>
+<div class="photo-decoration two"></div>
+<div class="photo-wrap">
+<div class="photo-placeholder"><img alt="change photo here - hero photo" class="replaceable-img" src="NASUHA.JPG"/></div>
+</div>
+<div class="name-sticker">
+<strong>Khalida Nasuha</strong>
+<span>E-commerce &amp; Social Media Specialist</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT / STATS -->
+<section class="about-section" id="about">
+<div class="section-number">01</div>
+<div class="about-main">
+<p class="tiny-label">About me</p>
+<h2>Creative enough for content, structured enough for commerce.</h2>
+<p>
+          I help product-based brands build stronger online presence through social media content,
+          marketplace management, campaign execution, paid ads, live commerce, website support and
+          AI-assisted creative production.
+        </p>
+</div>
+<div class="stats-card">
+<div>
+<strong>6+</strong>
+<span>years digital marketing experience</span>
+</div>
+<div>
+<strong>100K+</strong>
+<span>TikTok followers grown</span>
+</div>
+<div>
+<strong>1M+</strong>
+<span>views generated in 5 days</span>
+</div>
+<div>
+<strong>RM100K</strong>
+<span>sales during Raya campaign</span>
+</div>
+</div>
+</section>
+<!-- FEATURED WORK -->
+<section class="work-section" id="work">
+<div class="section-head">
+<div>
+<p class="tiny-label">Selected Work</p>
+<h2>Previous websites &amp; digital projects</h2>
+</div>
+<p></p>
+</div>
+<div class="featured-work">
+<article class="feature-card large">
+<div class="project-preview">
+
+<div class="browser-bar"><span></span><span></span><span></span></div>
+<div class="scroll-page fashion-page"><img alt="change photo here - portfolio website 1" class="replaceable-img website-preview-img" src="gimmi-ecommerce.png"/></div>
+</div>
+<div class="project-copy">
+<span>01 / Website</span>
+<h3>Fashion E-commerce Website</h3>
+<p>Product-focused layout for collection browsing, promo sections and mobile shopping experience.</p>
+<a href="https://www.gimmi.com.my">View project →</a>
+</div>
+</article>
+<article class="feature-card">
+<div class="project-preview small">
+
+<div class="browser-bar"><span></span><span></span><span></span></div>
+<div class="scroll-page wellness-page"><img alt="change photo here - portfolio website 2" class="replaceable-img website-preview-img" src="beautywellness.png"/></div>
+</div>
+<div class="project-copy">
+<span>02 / Landing page</span>
+<h3>Wellness / Beauty Website</h3>
+<p>Soft service page with trust-building structure and clear inquiry flow.</p>
+<a href="https://leeqhaempire.bcl.my/booking/lamourspa">View project →</a>
+</div>
+</article>
+<article class="feature-card">
+<div class="project-preview small">
+
+<div class="browser-bar"><span></span><span></span><span></span></div>
+<div class="scroll-page brand-page"><img alt="change photo here - portfolio website 3" class="replaceable-img website-preview-img" src="Takaful advisor.png"/></div>
+</div>
+<div class="project-copy">
+<span>03 / Portfolio</span>
+<h3>Personal Brand Website</h3>
+<p>Portfolio-style page for positioning, achievements and contact conversion.</p>
+<a href="https://leeqhaempire.bcl.my/lead/takaful-advisor">View project →</a>
+</div>
+</article>
+</div>
+<div class="work-strip">
+<div>Shopee Store Management</div>
+<div>TikTok Growth</div>
+<div>Social Media Content</div>
+<div>Raya Campaign</div>
+<div>Email Marketing</div>
+<div>AI Photo &amp; Video</div>
+</div>
+<div class="structured-work-wrap">
+<div class="structured-work-heading">
+<div>
+<p class="tiny-label">More work</p>
+<h3>Selected Digital Work</h3>
+</div>
+<p>
+            A curated mix of websites, marketplaces, TikTok content and campaign work.
+          </p>
+</div>
+<div class="structured-work-grid">
+<article class="structured-card">
+<div class="structured-visual website-structured"><img alt="change photo here - website portfolio" class="replaceable-img" src="Website.png"/></div>
+<div class="structured-copy">
+<span>Website</span>
+<h4>Website / Landing Page</h4>
+<p>Homepage, sections, banners and responsive layout previews.</p>
+</div>
+</article>
+<article class="structured-card">
+<div class="structured-visual shopee-structured"><img alt="change photo here - shopee portfolio" class="replaceable-img" src="SHOPEE.png"/></div>
+<div class="structured-copy">
+<span>Marketplace</span>
+<h4>Shopee Store Management</h4>
+<p>Store setup, campaigns, product visuals and marketplace optimisation.</p>
+</div>
+</article>
+<article class="structured-card">
+<div class="structured-visual tiktok-structured"><img alt="change photo here - tiktok portfolio" class="replaceable-img" src="TIKTOK.png"/></div>
+<div class="structured-copy">
+<span>Growth</span>
+<h4>TikTok Content &amp; Growth</h4>
+<p>Short-form video ideas, hooks, content direction and audience growth.</p>
+</div>
+</article>
+<article class="structured-card">
+<div class="structured-visual social-structured"><img alt="change photo here - social portfolio" class="replaceable-img" src="SOCIAL MEDIA-2.png"/></div>
+<div class="structured-copy">
+<span>Content</span>
+<h4>Social Media Content</h4>
+<p>Post visuals, campaign creatives and branded content planning.</p>
+</div>
+</article>
+<article class="structured-card">
+<div class="structured-visual campaign-structured"><img alt="change photo here - campaign portfolio" class="replaceable-img" src="CAMPAIGN.png"/></div>
+<div class="structured-copy">
+<span>Campaign</span>
+<h4>Campaign Visuals</h4>
+<p>Seasonal campaigns, promo assets and sales-driven event execution.</p>
+</div>
+</article>
+<article class="structured-card">
+<div class="structured-visual ai-structured"><img alt="change photo here - ai portfolio" class="replaceable-img" src="Ai Photo.png"/></div>
+<div class="structured-copy">
+<span>Creative</span>
+<h4>AI Photo &amp; Video Creative</h4>
+<p>AI-assisted visuals and video concepts adapted for content marketing.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+<div class="section-number">02</div>
+<div class="skills-intro">
+<p class="tiny-label">Skills / Tools</p>
+<h2>Full digital flow, from content to checkout.</h2>
+</div>
+<div class="skill-board">
+<div>
+<h3>Marketplace</h3>
+<p>Shopee, TikTok Shop, Lazada, product listing, campaign setup, store visuals and promotions.</p>
+</div>
+<div>
+<h3>Content</h3>
+<p>TikTok, Facebook, Instagram, content calendars, hooks, scripts and product storytelling.</p>
+</div>
+<div>
+<h3>Creative</h3>
+<p>Canva, CapCut, Adobe Photoshop, Adobe Illustrator, AI photo creation and AI video creation.</p>
+</div>
+<div>
+<h3>Growth</h3>
+<p>TikTok Ads, Shopee Ads, campaign monitoring, live commerce and email marketing.</p>
+</div>
+</div>
+
+      <div class="tools-panel">
+        <div class="tools-panel-copy">
+          <p class="tiny-label">Apps / Platforms</p>
+          <h3>Tools I use for content, commerce & creative work</h3>
+        </div>
+
+        <div class="tools-grid">
+          <span>Shopee</span>
+          <span>TikTok Shop</span>
+          <span>Lazada</span>
+          <span>Meta Business Suite</span>
+          <span>TikTok Ads</span>
+          <span>Shopee Ads</span>
+          <span>Canva</span>
+          <span>CapCut</span>
+          <span>Adobe Photoshop</span>
+          <span>Adobe Illustrator</span>
+          <span>Email Marketing</span>
+          <span>AI Photo / Video</span>
+        </div>
+      </div>
+
+    </section>
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+<p class="tiny-label">Let’s connect</p>
+<h2>Need someone who understands content, commerce &amp; conversion?</h2>
+<div class="contact-links">
+<a href="mailto:khalidanasuha@gmail.com">khalidanasuha@gmail.com</a>
+<a href="tel:+60133875569">013-3875569</a>
+<a href="https://www.linkedin.com/in/khalidah-nasuha/" rel="noreferrer" target="_blank">LinkedIn</a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<span>© 2026 Khalida Nasuha</span>
+<span></span>
+</footer>
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileNav = document.querySelector(".mobile-nav");
+
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+</script>
+</body>
+</html>
