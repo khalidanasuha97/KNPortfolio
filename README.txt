@@ -39,3 +39,5 @@ Fix: Hero Section Metric Cards
 - Moved the 100K+ followers card inside the hero panel so it is fully visible.
 - Adjusted the RM100K card position.
 - Reduced the photo frame slightly to give the metric cards more breathing space.
+
+
